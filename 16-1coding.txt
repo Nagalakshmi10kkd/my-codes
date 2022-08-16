@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int a[20],n,i,j;
+	int flag=0;
+	printf("enter size of the array:");
+	scanf("%d",&n);
+	printf("enter array elements:\n");
+	for(i=0;i<n;i++)
+	   scanf("%d",&a[i]);
+	printf("the prime numbers are:\n");   
+	for(i=n-1;i>=0;i--)
+	  {
+	  	flag=0;
+	  	for(j=2;j<a[i];j++)
+	  	  {
+	  	  	if(a[i]%j==0)
+	  	  	  {
+	  	  	  	flag=1;
+	  	  	  	break;
+			  }
+	      }
+	      if(flag==0)
+	       printf("%d \t",a[i]);
+	  }
+}
+output:
+enter size of the array:5
+enter array elements:
+1
+2
+3
+4
+5
+the prime numbers are:
+5      3       2       1

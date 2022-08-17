@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+	int n;
+	int i;
+	int a[10];
+	printf("enter number:");
+	scanf("%d",&n);//5
+	int s=n*(n+1)/2;//15
+	int sum=0;
+	printf("enter elements into the array:\n");
+	for(i=1;i<n;i++)
+	  {
+	  	scanf("%d",&a[i]);
+	  }
+	for(i=1;i<n;i++)
+	  {
+	  	sum=sum+a[i];//1+2+3+5//11
+	  }
+	if(sum==s)
+	  printf("no element is missed");
+	else
+	  printf("%d is missed",s-sum);    
+}
+output:
+enter number:5
+enter elements into the array:
+1
+2
+3
+5
+4 is missed

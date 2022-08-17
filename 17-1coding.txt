@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	int n1=0;
+	int n2=1;
+	int n3;
+	int i;
+	int n;
+	scanf("%d",&n);
+	printf("the fibonocci series is:\n");
+	printf("%d %d",n1,n2);
+	for(i=0;i<n;i++)
+	  {
+	  	n3=n1+n2;
+	  	printf(" %d ",n3);
+	  	n1=n2;
+	  	n2=n3;
+	  }
+}
+output:
+9
+the fibonocci series is:
+0 1 1  2  3  5  8  13  21  34  55

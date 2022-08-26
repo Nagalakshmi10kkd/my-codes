@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char str[20];
+	int i;
+	int count1=0,count2=0,count3=0,count4=0;
+	printf("enter any string:");
+	gets(str);
+	for(i=0;str[i]!='\0';i++)
+	  {
+	  	if(isupper(str[i]))
+	  	  count1=count1+1;
+	  	else if(islower(str[i]))
+		   count2=count2+1;
+		else if(str[i]>=48 && str[i]<=57)
+		   count3=count3+1;
+		else
+		   count4=count4+1;      
+ 	  }
+	printf("count of uppercase characters: %d ",count1);
+	printf("\ncount of lowercase characters: %d",count2);
+	printf("\ncount of number: %d",count3);
+	printf("\nspecial numbers: %d",count4);
+  return 0;	
+}
+output:
+enter any string:Aditya@123
+count of uppercase characters: 1
+count of lowercase characters: 5
+count of number: 3
+special characters: 1

@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+	char str[50];
+	int i,count=1;
+	printf("enter any string:");
+	scanf("%[^\n]s",str);
+	for(i=0;str[i]!='\0';i++)
+	  {
+	  	if(str[i]=='\n'||str[i]==' '||str[i]=='\t')
+	  	  count=count+1;
+	  }
+	 printf("no of words is: %d",count); 
+}
+output:
+enter any string:my name is nagalakshmi
+no of words is: 4

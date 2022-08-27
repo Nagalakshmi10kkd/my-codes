@@ -1,0 +1,65 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	char str1[10],str2[10];
+	int i,j,temp1,temp2;
+	int size1;
+	int size2;
+	int count=0;
+	printf("enter first string:");
+	gets(str1);
+	size1=strlen(str1);
+	printf("enter second string:");
+	gets(str2);
+	size2=strlen(str2);
+	for(i=0;i<size1-1;i++)
+	   {
+	   	for(j=0;j<size1-i-1;j++)
+	   	  {
+	   	  	if(str1[j]>str1[j+1])
+	   	  	   {
+	   	  	   	temp1=str1[j];
+	   	  	   	str1[j]=str1[j+1];
+	   	  	   	str1[j+1]=temp1;
+			   }
+		  }
+	   }
+    printf("the sorting of the first string is:");  
+	puts(str1);
+	for(i=0;i<size2-1;i++)
+	   {
+	   	for(j=0;j<size2-i-1;j++)
+	   	  {
+	   	  	if(str2[j]>str2[j+1])
+	   	  	   {
+	   	  	   	temp2=str2[j];
+	   	  	   	str2[j]=str2[j+1];
+	   	  	   	str2[j+1]=temp2;
+			   }
+		  }
+	   }
+	printf("the sorting of the second string is:");
+	puts(str2);
+	printf("\n");
+	if(size1==size2)
+	  {
+	  	for(i=0;str1[i]!='\0';i++)
+	  	  {
+	  	  	if(str1[i]==str2[i])
+	  	  	  count++;
+			}
+	  }
+	if(count==size1)
+	   printf("anagram");
+	else
+	    printf("not anagram");    
+	 
+}
+output:
+enter first string:below
+enter second string:elbow
+the sorting of the first string is:below
+the sorting of the second string is:below
+
+anagram

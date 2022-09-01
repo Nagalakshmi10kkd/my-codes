@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int a,ans;
+	printf("enter any value:");
+	scanf("%d",&a);
+	ans=checkevenodd(a);
+	if(ans==1)
+	  printf("even");
+	else
+	  printf("odd");  
+}
+int checkevenodd(int x)
+  {
+  	if(x%2==0)
+  	  return 1;
+  	else
+	   return 0;  
+  }
+output:
+enter any value:5
+odd
+enter any value:6
+even

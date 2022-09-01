@@ -1,0 +1,22 @@
+int fact(int);
+int main()
+{
+	int n,ans;
+	printf("enter any number:");
+	scanf("%d",&n);
+	ans=fact(n);
+	printf("the factorial value is : %d",fact(n));
+}
+int fact(int n)
+{
+	if(n==1||n==0)
+	   return 1;
+	else
+	  return n*fact(n-1);   
+}
+output:
+enter any number:5
+the factorial value is : 120
+output:
+enter any number:4
+the factorial value is : 24

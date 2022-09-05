@@ -1,0 +1,28 @@
+#include<stdio.h>
+void main()
+ {
+ 	int n,a[10],i;
+ 	scanf("%d",&n);
+ 	for(i=0;i<n;i++)
+ 	  {
+ 	  	scanf("%d",&a[i]);
+	   }
+    int k=n-1;
+ 	number(a,0,k);
+ }
+ void number(int a[], int start,int end)
+  {
+  	if(start>end)
+  	  return;
+  	else
+	   printf("%d ",a[start]);
+	 number(a,start+1,end);    
+  }
+output:
+5
+1
+2
+3
+4
+5
+1 2 3 4 5

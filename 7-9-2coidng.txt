@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+	int a[10],n;
+	int sum=0,i;
+	int *p;
+	printf("enter size of the array:");
+	scanf("%d",&n);
+	p=&a[0];
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	for(i=0;i<n;i++)
+	  {
+	  	sum+=*p;
+	  	p++;
+	  } 
+	  printf("%d",sum); 
+	
+}
+output:
+enter size of the array:3
+1
+6
+8
+15

@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main()
+{
+	int fib[10];
+	int n,sum=0,found=0,i,num,first,second;
+	printf("enter size of the fibnocci series:");
+	scanf("%d",&n);
+	printf("first number:");
+	scanf("%d",&first);
+	printf("second number:");
+	scanf("%d",&second);
+	printf("enter the number you want to search:");
+	scanf("%d",&num);
+	for(i=2;i<n;i++)
+	  {
+	  	sum=first+second;
+	  	first=second;    
+	  	second=sum;       
+	  	if(sum==num)
+	  	  {
+	  	   found=1;
+	  	   break;
+	      }
+	  }
+	 if(found==1)
+	   printf("yes");
+	 else
+	   printf("no");   
+}
+output:
+enter size of the fibnocci series:5
+first number:0
+second number:1
+enter the number you want to search:5
+no
+
+output:
+enter size of the fibnocci series:6
+first number:0
+second number:1
+enter the number you want to search:5
+yes
